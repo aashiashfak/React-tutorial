@@ -13,7 +13,7 @@ class Forms extends Component {
   };
 
   onSubmit = () => {
-    console.log(this.state);
+    console.log(`${this.state.firstName} ${this.state.lastName}` );
   };
   render() {
     return (
