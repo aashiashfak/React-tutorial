@@ -10,13 +10,13 @@ export default class ConditionalRendering extends Component {
     // } else {
     //   return <div>Hello Guest</div>;
     // }
+
     // let message;
     // if (this.state.loggedIn) {
     //   message = "Hello vishwas";
     // } else {
     //   message = "Hello Guest";
     // }
-
     // return <div>{message}</div>;
 
     return (
@@ -26,5 +26,6 @@ export default class ConditionalRendering extends Component {
     )
 
     // return this.state.loggedIn && <div>Welcome Aashi</div>
+    
   }
 }

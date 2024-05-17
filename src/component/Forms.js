@@ -4,6 +4,7 @@ class Forms extends Component {
   state = {
     firstName: "",
     lastName: "",
+    email:""
   };
 
   onHandleChange = (event) => {
@@ -12,12 +13,16 @@ class Forms extends Component {
     });
   };
 
-  onSubmit = () => {
-    console.log(`${this.state.firstName} ${this.state.lastName}` );
+  onSubmit = (event) => {
+    alert(
+      `${this.state.firstName} ${this.state.lastName}\n${this.state.email}`
+    );
+    console.log(`${this.state.firstName} ${this.state.lastName}\n${this.state.email}` );
+    event.preventDefault()
   };
   render() {
     return (
-      <form action="">
+      <form onSubmit={this.onSubmit}>
         <h1>Form Component</h1>
         <input
           type="text"
@@ -35,9 +40,15 @@ class Forms extends Component {
           onChange={this.onHandleChange}
         />
         <br />
-        <button type="button" onClick={this.onSubmit}>
-          Submit
-        </button>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email address"
+          value={this.state.email}
+          onChange={this.onHandleChange}
+        />
+        <br />
+        <button type="submit">Submit</button>
       </form>
     );
   }

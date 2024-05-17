@@ -1,11 +1,13 @@
 import React, {Component} from "react";
 import "./App.css";
+// import ListRendering from "./component/ListRendering";
 // import Parent from "./component/Parent";
-import ConditionalRendering from "./component/ConditionalRendering";
+// import ConditionalRendering from "./component/ConditionalRendering";
 // import Subscribe from "./component/Subscribe";
 // import Todo from "./component/Todo";
 // import Counter from "./component/Counter";
 // import Forms from "./component/Forms";
+import LlifecycleA from "./component/LlifecycleA";
 // import List from "./component/List";
 // import { Greet } from './component/Greet';
 
@@ -38,7 +40,9 @@ class App extends Component {
         </Greet> */}
         {/* <Parent/> */}
         {/* <Subscribe/> */}
-        <ConditionalRendering/>
+        {/* <ConditionalRendering/> */}
+        {/* <ListRendering/> */}
+        <LlifecycleA/>
       </div>
     );
   }
