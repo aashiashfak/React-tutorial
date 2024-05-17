@@ -1,28 +1,25 @@
 import React, {Component} from "react";
 
 class Counter extends Component {
-
   state = {
     counter: 0,
   };
 
-  onIncrement = () => {
+  onIncrement = () =>
     this.setState({
       counter: this.state.counter + 1,
     });
-  };
 
-  onDecrement = () => {
+  onDecrement = () =>
     this.setState({
       counter: this.state.counter - 1,
     });
-  };
 
   render() {
     return (
       <div>
         <h1>Counter Component</h1>
-        <h1>{this.state.counter}</h1> 
+        <h1>{this.state.counter}</h1>
         <button onClick={this.onIncrement}> + </button>
         <button onClick={this.onDecrement}> - </button>
       </div>
