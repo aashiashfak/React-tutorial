@@ -11,10 +11,10 @@ export class LlifecycleA extends Component {
       console.log("LifecycleA constructor");
     }
 
-    static getDerivedStateFromProps(Props,state){
-        return null 
-        console.log("LifecycleA getDerivedStateFromProps");
-    }
+    // static getDerivedStateFromProps(Props,state){
+    //     return null 
+    //     console.log("LifecycleA getDerivedStateFromProps");
+    // }
 
     componentDidMount(){
         console.log("LifecycleA componentDidMount")

@@ -1,10 +1,15 @@
 import React, {Component} from "react";
 
 class Forms extends Component {
+  constructor(props) {
+    super(props)
+    this.inputRef = React.createRef();
+  }
+
   state = {
     firstName: "",
     lastName: "",
-    email:""
+    email: "",
   };
 
   onHandleChange = (event) => {
@@ -17,9 +22,17 @@ class Forms extends Component {
     alert(
       `${this.state.firstName} ${this.state.lastName}\n${this.state.email}`
     );
-    console.log(`${this.state.firstName} ${this.state.lastName}\n${this.state.email}` );
-    event.preventDefault()
+    console.log(
+      `${this.state.firstName} ${this.state.lastName}\n${this.state.email}`
+    );
+    event.preventDefault();
   };
+
+  componentDidMount(){
+    console.log(this.inputRef)
+    this.inputRef.current.focus()
+  }
+
   render() {
     return (
       <form onSubmit={this.onSubmit}>
@@ -30,6 +43,7 @@ class Forms extends Component {
           placeholder="First Name"
           value={this.state.firstName}
           onChange={this.onHandleChange}
+          ref={this.inputRef}
         />
         <br />
         <input

@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import "./App.css";
+import Hero from "./component/Hero";
+import ErrorBoundary from "./component/ErrorBoundary";
 // import ListRendering from "./component/ListRendering";
 // import Parent from "./component/Parent";
 // import ConditionalRendering from "./component/ConditionalRendering";
@@ -7,7 +9,7 @@ import "./App.css";
 // import Todo from "./component/Todo";
 // import Counter from "./component/Counter";
 // import Forms from "./component/Forms";
-import LlifecycleA from "./component/LlifecycleA";
+// import LlifecycleA from "./component/LlifecycleA";
 // import List from "./component/List";
 // import { Greet } from './component/Greet';
 
@@ -42,7 +44,16 @@ class App extends Component {
         {/* <Subscribe/> */}
         {/* <ConditionalRendering/> */}
         {/* <ListRendering/> */}
-        <LlifecycleA/>
+        {/* <LlifecycleA/> */}
+        <ErrorBoundary>
+          <Hero heroName={"BatMan"} />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName={"SuperMan"} />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName={"Joker"} />
+        </ErrorBoundary>
       </div>
     );
   }
