@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import "./App.css";
-import Hero from "./component/Hero";
-import ErrorBoundary from "./component/ErrorBoundary";
+import ClickCounter from "./ClickCounter";
+import HoverCount from "./HoverCount";
+// import Hero from "./component/Hero";
+// import ErrorBoundary from "./component/ErrorBoundary";
 // import ListRendering from "./component/ListRendering";
 // import Parent from "./component/Parent";
 // import ConditionalRendering from "./component/ConditionalRendering";
@@ -45,7 +47,7 @@ class App extends Component {
         {/* <ConditionalRendering/> */}
         {/* <ListRendering/> */}
         {/* <LlifecycleA/> */}
-        <ErrorBoundary>
+        {/* <ErrorBoundary>
           <Hero heroName={"BatMan"} />
         </ErrorBoundary>
         <ErrorBoundary>
@@ -53,7 +55,9 @@ class App extends Component {
         </ErrorBoundary>
         <ErrorBoundary>
           <Hero heroName={"Joker"} />
-        </ErrorBoundary>
+        </ErrorBoundary> */}
+        <ClickCounter name='Aashi' />
+        <HoverCount />
       </div>
     );
   }
