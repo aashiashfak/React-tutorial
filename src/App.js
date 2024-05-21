@@ -1,7 +1,10 @@
 import React, {Component} from "react";
 import "./App.css";
-import Toggle from "./component/Toggle";
-import ToggleText from "./component/ToggleText";
+import ContextProvider from "./component/ContextProvider";
+import PersonWrapperContext from "./component/PersonWrapperContext";
+import PortalDemo from "./component/PortalDemo";
+// import Toggle from "./component/Toggle";
+// import ToggleText from "./component/ToggleText";
 // import ClickCounter from "./ClickCounter";
 // import HoverCount from "./HoverCount";
 // import Hero from "./component/Hero";
@@ -60,12 +63,16 @@ class App extends Component {
         </ErrorBoundary> */}
         {/* <ClickCounter name='Aashi' />
         <HoverCount /> */}
-        <Toggle render={({on,toggle})=>(
+        {/* <Toggle render={({on,toggle})=>(
           <button onClick={toggle}>
             {on ? 'ON':'OFF'}
           </button>
         )}/>
-        <ToggleText/>
+        <ToggleText/> */}
+        <ContextProvider>
+          <PersonWrapperContext/>
+        </ContextProvider>
+        <PortalDemo/>
       </div>
     );
   }
