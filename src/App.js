@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import "./App.css";
-import ClickCounter from "./ClickCounter";
-import HoverCount from "./HoverCount";
+import Toggle from "./component/Toggle";
+import ToggleText from "./component/ToggleText";
+// import ClickCounter from "./ClickCounter";
+// import HoverCount from "./HoverCount";
 // import Hero from "./component/Hero";
 // import ErrorBoundary from "./component/ErrorBoundary";
 // import ListRendering from "./component/ListRendering";
@@ -56,8 +58,14 @@ class App extends Component {
         <ErrorBoundary>
           <Hero heroName={"Joker"} />
         </ErrorBoundary> */}
-        <ClickCounter name='Aashi' />
-        <HoverCount />
+        {/* <ClickCounter name='Aashi' />
+        <HoverCount /> */}
+        <Toggle render={({on,toggle})=>(
+          <button onClick={toggle}>
+            {on ? 'ON':'OFF'}
+          </button>
+        )}/>
+        <ToggleText/>
       </div>
     );
   }
